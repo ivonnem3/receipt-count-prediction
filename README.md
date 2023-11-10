@@ -15,7 +15,7 @@ INSERT INFO
 INSERT INFO
 
 ## Docker Deployment
-INSERT INFO 
+INSERT INFO
 
 ## License  
 RCP's App code are released under the MIT License. See [here](https://github.com/ivonnem3/receipt-count-prediction/blob/main/LICENSE) for further details.
