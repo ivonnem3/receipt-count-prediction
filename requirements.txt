@@ -11,3 +11,4 @@ seaborn==0.11.2
 # Machine Learning Frameworks
 tensorflow==2.6.0
 pytorch==1.9.1
+statsmodels
