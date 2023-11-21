@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html >
+
 <head>
   <meta charset="UTF-8">
   <title>Deployment Tutorial</title>
@@ -7,26 +8,24 @@
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
 
-</head>
+<body style="background: #890c73;">
 
-<body style="background: #000;">
- <div class="login">
-	<h1>Fetch Reciept Forcast</h1>
+  <div class="login">
+    <h1 style="font-family:Trebuchet MS;">🐕fetch</h1>
+    <h2 style="font-family:Trebuchet MS;">reciept forcast</h2>
 
-     <!-- Main Input For Receiving Query to our ML -->
+    <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="date" placeholder="ex YYYY-MM-DD" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
-
+        <button style="background: #ff9200;" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
    <br>
+ </form>
    <br>
    {{ prediction_text }}
  </div>
-
-
 
 </body>
 </html>
