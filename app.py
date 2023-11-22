@@ -20,7 +20,7 @@ def predict():
     prediction = model.predict(final_features)
 
     output = round(prediction[0], 2)
-    return render_template('index.html', prediction_text='Sales should be $ {}'.format(output))
+    return render_template('index.html', final_features)
 
 @app.route('/results', methods=['POST'])
 def results():
@@ -28,8 +28,6 @@ def results():
     predict =model.predict([np.array(list(data.values()))])
     output = predict[0]
     return jsonify(output)
-
-
 
 
 
