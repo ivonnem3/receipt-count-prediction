@@ -13,22 +13,22 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST','GET'])
 def predict():
-    int_features = [int(x) for x in request.form.values()]
-    final_features = [np.array(int_features)]
-    prediction = model.predict(final_features)
 
-    output = round(prediction[0], 2)
-    return render_template('index.html', final_features)
+    date = request.form["date"]
+    return render_template('index.html', date)
+
 
 @app.route('/results', methods=['POST'])
 def results():
+
+    """
     data = request.get_json(force=True)
     predict =model.predict([np.array(list(data.values()))])
     output = predict[0]
     return jsonify(output)
-
+    """
 
 
 
